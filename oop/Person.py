@@ -12,26 +12,32 @@ class Student(Person):
         super().__init__(first_name, last_name) 
         self.grade = grade
 
-# to comment: Ctrl-K Ctrl-C
     def description(self):
-        print(f"I'm a Student:{self.first_name} {self.last_name}, Grade:{self.grade}")
+        print(f"I'm a Student: {self.first_name} {self.last_name}, Grade:{self.grade}")
 
-p = Person("Patrick", "Lai")
+class Teacher(Person):
+    def __init__(self, first_name, last_name, title):
+        super().__init__(first_name, last_name) 
+        self.title = title
+        
+    def description(self):
+        print(f"I'm a Teacher: {self.first_name} {self.last_name} {self.title}")
+
+
+p = Person("Person", "A")
 s = Student("Alex", "Wong", "F.2")
-
+t = Teacher("Patrick", "Lai", "Coding Teacher")
 print(type(p))
 print(type(s))
+print(type(t))
 
 print(p.first_name, p.last_name)
 print(s.first_name, s.last_name, s.grade)
-
+print(t.first_name, t.last_name)
 # Polymorphism
 p.description()
 s.description()
+t.description()
 
 Person.description(p)
 Student.description(s)
-
-# Shape, Circle, Square, Rectangle, Trapezoid
-# Attribute
-# Area, Perimeter 
