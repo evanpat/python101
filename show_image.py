@@ -1,5 +1,6 @@
 from PIL import Image
 
+
 #pic = "images/800px-MPSS_Mario.webp"
 pic = "images/cartoon.jpg"
 pic1 = "images/cartoon1.png"
@@ -18,3 +19,4 @@ with Image.open(pic) as im:
     im2.save(pic2)
 
 #Image.open(pic2).show()
+
