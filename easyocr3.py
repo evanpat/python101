@@ -12,7 +12,7 @@ def cleanup_text(text):
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True, help="path to input image to be OCR'd")
-ap.add_argument("-l", "--langs", required=True, help="comma separated list of languages to OCR")
+ap.add_argument("-l", "--langs", default="en", help="comma separated list of languages to OCR")
 ap.add_argument("-g", "--gpu", type=int, default=-1, help="whether or not GPU should be used")
 args = vars(ap.parse_args())
 
@@ -48,5 +48,5 @@ for (bbox, text, prob) in results:
 # show the output image
 cv2.imshow("Image", image)
 cv2.waitKey(0)
-# python .\easyocr3.py -i images/chinese_tra.jpg -l en
+# python .\easyocr3.py -i images/chinese_tra.jpg -l en,cn_tr
 # python .\easyocr3.py -i images/french_sign.png -l fr

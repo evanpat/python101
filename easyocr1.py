@@ -1,7 +1,7 @@
 import easyocr
 
 reader = easyocr.Reader(['ch_sim', 'en'], gpu=True)
-result = reader.readtext('images/chinese.jpg', detail=1)
+result = reader.readtext('images/code.png', detail=1)
 
 # str = ""
 # for r in result:
