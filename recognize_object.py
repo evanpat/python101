@@ -2,12 +2,12 @@
 from ultralytics import YOLO
 import cv2
 
-model = YOLO("yolov8m.pt")
+model = YOLO("yolov8n.pt")
 
 
 #load video
 #video_path = "https://www.youtube.com/watch?v=KBsqQez-O4w"
-video_path = './images/car.mp4'
+video_path = './images/elephant.mp4'
 cap = cv2.VideoCapture(video_path)
 
 # read frames
