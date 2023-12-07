@@ -7,8 +7,8 @@ soup = BeautifulSoup(page.text, "html.parser")
 quotes = soup.findAll("span", attrs={"class":"text"})
 authors = soup.findAll("small", attrs={"class":"author"})
 
-file = open("quotes.csv", "w")
-writer = csv.writer(file)
+file = open("quotes.csv", "w", encoding='utf-8')
+writer = csv.writer(file, lineterminator='\n', quoting=csv.QUOTE_ALL)
 
 writer.writerow(["QUOTES", "AUTHORS"])
 
