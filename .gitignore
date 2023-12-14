@@ -130,4 +130,4 @@ dmypy.json
 /runs
 /datasets
 *.pt
-quotes.csv
+*.csv
