@@ -130,4 +130,3 @@ dmypy.json
 /runs
 /datasets
 *.pt
-*.csv
