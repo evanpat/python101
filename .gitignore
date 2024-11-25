@@ -130,3 +130,6 @@ dmypy.json
 /runs
 /datasets
 *.pt
+fv/fvp_user.csv
+fv/name_list.csv
+fv/output.txt
