@@ -54,8 +54,7 @@ def remove_dir_password(directory, password):
     except Exception as e:
         print(f"An error occurred: {e}")
 
-
-if args.dir != "":
+if args.dir != None:
     remove_dir_password(args.dir, args.pw)
 else:
     remove_file_password(args.file, args.pw)
